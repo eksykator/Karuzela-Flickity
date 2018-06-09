@@ -1,4 +1,19 @@
-var elem = document.querySelector('.main-carousel');
+(function() {
+    var templateSlideItem = document.getElementById('template-slide-item').innerHTML;
+    
+    Mustache.parse(templateSlideItem);
+    var slidesList = '';
+    for (var i = 0; i < slidesData.length; i++) {
+        console.log(slidesData);
+        slidesList += Mustache.render(templateSlideItem, slidesData[i]);
+        
+    }
+    results.insertAdjacentHTML('beforeend', slidesList);
+})();
+
+
+
+var elem = document.querySelector('#results');
 var flkty = new Flickity( elem, {
   // options
   cellAlign: 'left',
@@ -8,7 +23,7 @@ var flkty = new Flickity( elem, {
 
 var button = document.querySelector('#restart-button');
 button.addEventListener('click', function() {
-    var flkty = new Flickity('.main-carousel');
+    var flkty = new Flickity('#results');
     flkty.select(0);
 })
 
