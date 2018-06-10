@@ -29,3 +29,37 @@ flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
 });
+
+function initMap() {
+    var bridge = {
+        lat: 51.1094937, 
+        lng: 17.0503735
+    };
+    
+    var map = new google.maps.Map(document.getElementById('map'),{
+        zoom: 4,
+        center: bridge
+    });
+    
+    var marker = new google.maps.Marker({
+        position: bridge,
+        map: map
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
