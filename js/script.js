@@ -40,10 +40,16 @@ function initMap() {
     
     var place;
     for(var i = 0; i < slidesData.length; i++) {
+
         place = slidesData[i].coords;
-        new google.maps.Marker({
+        var marker = new google.maps.Marker({
             position: place,
             map: map
         });
+        marker.index = i;
+        marker.addListener('click', function() {
+            var flkty = new Flickity('#results');
+            flkty.select(this.index);
+        }) 
     }
 }
