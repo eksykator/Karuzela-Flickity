@@ -1,8 +1,12 @@
 body { margin: 0; }
 
-.container { width: 1000px; height: 100%; margin: 0 auto; color: white; display: flex; justify-content: center; align-items: center; }
+.carousel-cell { width: 1000px; height: 100%; margin: 0 auto; color: #fff; display: flex; justify-content: center; align-items: center; background-size: cover; background-position: center; }
 
-.carousel-cell { width: 100%; height: 50vh; min-height: 250px; margin-right: 10px; background-size: cover; background-position: center; }
+.container { width: 100%; height: 50vh; min-height: 250px; margin-right: 10px; }
+
+.description { text-align: center; margin: 0 10px; }
+
+h1 { margin: 0 10px; position: absolute; top: 2vh; right: 10vw; }
 
 .flickity-viewport { overflow: hidden; }
 
@@ -30,5 +34,5 @@ ol { list-style-type: none; }
 
 #map { width: 100%; height: 40vh; background-color: aqua; position: absolute; top: 60vh; }
 
-@media screen and (max-width: 1000px) { .container { width: 100%; }
-  .container p { margin: 0 70px; } }
+@media screen and (max-width: 1000px) { .carousel-cell { width: 100%; }
+  .description p { margin: 0 70px; } }
