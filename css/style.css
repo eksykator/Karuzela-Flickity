@@ -30,5 +30,5 @@ ol { list-style-type: none; }
 
 .progress-bar { height: 20px; width: 0; background: #825A7C; }
 
-@media screen and (max-width: 1000px) { .container { width: 100%; }
-  .container p { margin: 0 70px; } }
+@media screen and (max-width: 1000px) { .carousel-cell { width: 100%; }
+  .description p { margin: 0 70px; } }

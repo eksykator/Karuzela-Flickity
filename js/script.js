@@ -4,14 +4,10 @@
     Mustache.parse(templateSlideItem);
     var slidesList = '';
     for (var i = 0; i < slidesData.length; i++) {
-        console.log(slidesData);
-        slidesList += Mustache.render(templateSlideItem, slidesData[i]);
-        
+        slidesList += Mustache.render(templateSlideItem, slidesData[i]);   
     }
     results.insertAdjacentHTML('beforeend', slidesList);
 })();
-
-
 
 var elem = document.querySelector('#results');
 var flkty = new Flickity( elem, {
