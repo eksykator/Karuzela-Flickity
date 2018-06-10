@@ -40,7 +40,6 @@ function initMap() {
     
     var place;
     for(var i = 0; i < slidesData.length; i++) {
-
         place = slidesData[i].coords;
         var marker = new google.maps.Marker({
             position: place,
@@ -52,4 +51,8 @@ function initMap() {
             flkty.select(this.index);
         }) 
     }
+    
+    flkty.on('change', function(index) {
+        map.panTo(slidesData[index].coords);
+    }); 
 }
