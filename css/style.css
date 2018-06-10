@@ -1,3 +1,5 @@
+body { margin: 0; }
+
 .container { width: 1000px; height: 100%; margin: 0 auto; color: white; display: flex; justify-content: center; align-items: center; }
 
 .carousel-cell { width: 100%; height: 50vh; min-height: 250px; margin-right: 10px; background-size: cover; background-position: center; }
@@ -22,9 +24,11 @@
 
 ol { list-style-type: none; }
 
-#restart-button { position: absolute; top: 56vh; right: 10px; color: #fff; font-size: 20px; background-color: #825A7C; border: none; padding: 10px; }
+#restart-button { position: absolute; top: 56vh; right: 10px; color: #fff; font-size: 18px; background-color: #825A7C; border: none; padding: 5px; }
 
 .progress-bar { height: 20px; width: 0; background: #825A7C; }
+
+#map { width: 100%; height: 40vh; background-color: aqua; position: absolute; top: 60vh; }
 
 @media screen and (max-width: 1000px) { .container { width: 100%; }
   .container p { margin: 0 70px; } }
